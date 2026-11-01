@@ -1,4 +1,4 @@
-# Disaster Scene Analysis: Buildings, Vehicles, and Roads
+# AI-for-Post-Disaster-Damage-Assesstment: Buildings, Vehicles, and Roads
 
 Jupyter notebooks and **folders for trained model artifacts** covering building segmentation/damage assessment, vehicle detection and damage analysis, and disaster-scene semantic segmentation. Additional disaster-video analysis notebooks are under `notebooks/other/`.
 
