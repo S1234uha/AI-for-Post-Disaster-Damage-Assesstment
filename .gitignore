@@ -1,0 +1,40 @@
+# Python, Jupyter, and local environments
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.DS_Store
+
+# Secrets / keys
+.env
+.env.*
+!.env.example
+kaggle.json
+*credentials*.json
+*service-account*.json
+*.pem
+
+# Training datasets, bulky intermediate results, local exports
+/data/
+/datasets/
+/outputs/
+/runs/
+/wandb/
+/lightning_logs/
+/logs/
+/tmp/
+*.zip
+*.tar
+*.tar.gz
+*.tif
+*.tiff
+*.mp4
+*.mov
+*.avi
+
+# Model checkpoint formats intentionally NOT ignored:
+# Add checkpoints under models/ and use Git LFS for large binary artifacts.
