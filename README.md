@@ -2,15 +2,15 @@
 
 Jupyter notebooks and **folders for trained model artifacts** covering building segmentation/damage assessment, vehicle detection and damage analysis, and disaster-scene semantic segmentation. Additional disaster-video analysis notebooks are under `notebooks/other/`.
 
-> **Repository status:** This package contains seven distinct Jupyter notebooks (source code and markdown) prepared from the supplied uploads. **No trained model weights were supplied.** The `models/` directories contain instructions and placeholders, not runnable checkpoints. Notebook outputs were cleared to keep the repository smaller and avoid uploading captured output imagery.
+> **Repository status:** Seven distinct Jupyter notebooks (source code and markdown) are available in `notebooks/`. Two existing car-model checkpoints (`car-75e-11n.pt` and `car-damage (1).pt`) are now also available under `models/car/`, with the original root-level copies preserved. No building or road checkpoint has been uploaded. Saved notebook outputs were cleared to keep the repository smaller.
 
 ## Project layout
 
 ```text
-disaster-scene-analysis/
+AI-for-Post-Disaster-Damage-Assesstment/
 ├── models/
 │   ├── building/           # Add trained building model weights here
-│   ├── car/                # Add trained vehicle/car damage weights here
+│   ├── car/                # Two existing car checkpoints are present
 │   └── road/               # Add trained road/scene segmentation weights here
 ├── notebooks/
 │   ├── building/           # Building footprints and multi-view damage
@@ -51,7 +51,7 @@ Examples of filenames referenced in the notebooks:
 - `models/car/car-damage-yolo26-finetuned.pt` — output of the YOLO26 fine-tuning notebook
 - `models/road/train_epoch_100.pth` — RescueNet checkpoint path referenced by the scene-segmentation notebook
 
-These are **examples**, not files included with this package.
+The first two car `.pt` files above are included under `models/car/`. The remaining filenames are examples of checkpoints referenced by notebooks but not currently provided.
 
 ## Run a notebook
 
@@ -59,23 +59,9 @@ Open a notebook in Jupyter or Google Colab. Install the requirements in its setu
 
 Some notebooks rely on external repositories or datasets; please check those resources' licenses and download terms. These notebooks have been **organized and cleaned of saved outputs, not executed or verified end-to-end**.
 
-## Publish to GitHub
+## GitHub repository
 
-1. Create an **empty** repository on GitHub named `disaster-scene-analysis` (do not initialize it with a GitHub-generated README, as this package already has one).
-2. Unzip this package. On the empty repository page, choose **uploading an existing file**, or later go to **Add file → Upload files**.
-3. Drag the **contents inside** `disaster-scene-analysis/` into GitHub; keep the `models/` and `notebooks/` directories. Confirm the folder paths in the upload preview, then commit the changes.
-4. When adding large trained model files, use Git LFS and a Git client (instructions below); the GitHub browser is not appropriate for large weights.
-
-Alternatively, from a terminal inside the unzipped `disaster-scene-analysis` directory:
-
-```bash
-git init
-git branch -M main
-git add .
-git commit -m "Add disaster-scene notebooks and model directories"
-git remote add origin https://github.com/YOUR_USERNAME/disaster-scene-analysis.git
-git push -u origin main
-```
+Project files are published to [`S1234uha/AI-for-Post-Disaster-Damage-Assesstment`](https://github.com/S1234uha/AI-for-Post-Disaster-Damage-Assesstment). Model weights currently at repository root were also copied into `models/car/` without deleting the originals. To add additional model weights, place them under the appropriate `models/` subdirectory.
 
 ### Large model files (Git LFS)
 
