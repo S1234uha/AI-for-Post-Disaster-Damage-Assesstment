@@ -1,6 +1,6 @@
 # Notebook inventory and provenance
 
-The following source uploads were converted to cleaner, GitHub-friendly `.ipynb` files. Notebook **source code and markdown are preserved**; existing saved outputs were removed and execution counts cleared. No cells were run and no model checkpoints are included.
+The following source uploads were converted to cleaner, GitHub-friendly `.ipynb` files. Notebook **source code and markdown are preserved**; existing saved outputs were removed and execution counts cleared. No cells were run. Two car checkpoint files already existed in the repository and have been copied into `models/car/`.
 
 | Uploaded file | Repository location | Notes |
 |---|---|---|
@@ -21,4 +21,4 @@ The following source uploads were converted to cleaner, GitHub-friendly `.ipynb`
 
 ## Missing model files
 
-No model weights such as `.pt`, `.pth`, `.onnx`, `.h5`, or `.keras` were present in the supplied uploads. Place your actual checkpoints in the corresponding `models/` folder and verify notebook paths and dependencies. The notebooks refer to example output locations in Google Drive / Colab; this package does not fetch or manufacture any model weights.
+Two `.pt` checkpoints already existed in the GitHub repository: `car-75e-11n.pt` and `car-damage (1).pt`. Both have been copied to `models/car/`; the original root-level copies are retained. No building or road checkpoint is present, and additional car classifiers (`.keras`, etc.) have not been uploaded. Place further checkpoints in their corresponding `models/` folder and verify notebook paths and dependencies. The notebooks refer to example output locations in Google Drive / Colab; this repository does not fetch or manufacture additional model weights.
